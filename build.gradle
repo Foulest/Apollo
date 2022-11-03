@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.foulest.apollo'
+version = '1.0-SNAPSHOT'
+description = 'Apollo'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    flatDir {
+        dirs 'libs'
+    }
+
+    maven {
+        url = uri('https://hub.spigotmc.org/nexus/content/groups/public/')
+    }
+
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+configurations {
+    provided
+    implementation.extendsFrom(provided)
+}
+
+dependencies {
+    implementation group: 'org.atteo.classindex', name: 'classindex', version: '3.11'
+    compileOnly group: 'org.spigotmc', name: 'spigot', version: '1.8.8-R0.1-SNAPSHOT'
+    compileOnly group: 'org.spigotmc', name: 'spigot-api', version: '1.8.8-R0.1-SNAPSHOT'
+    compileOnly group: 'org.jetbrains', name: 'annotations', version: '23.0.0'
+    compileOnly group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.11'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+}
+
+jar {
+    from {
+        configurations.provided.asFileTree.files.collect {
+            zipTree(it)
+        }
+    }
+}

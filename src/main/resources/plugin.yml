@@ -1,5 +1,5 @@
-name: Frequency
-authors: [Elevated, Gson]
-version: 1.0
-softdepend: [DiscordLib]
-main: xyz.elevated.frequency.FrequencyPlugin
+name: Apollo
+authors: [Foulest]
+description: Apollo Anticheat
+version: 1.0.0
+main: net.foulest.apollo.ApolloPlugin
