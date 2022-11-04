@@ -38,7 +38,6 @@ public final class CheckManager {
                 .put(KillAuraB.class, new KillAuraB(playerData))
                 .put(KillAuraC.class, new KillAuraC(playerData))
                 .put(KillAuraD.class, new KillAuraD(playerData))
-                .put(KillAuraE.class, new KillAuraE(playerData))
                 .put(KillAuraF.class, new KillAuraF(playerData))
                 .put(KillAuraG.class, new KillAuraG(playerData))
                 .put(KillAuraH.class, new KillAuraH(playerData))
@@ -111,7 +110,6 @@ public final class CheckManager {
                 .put(PingSpoofI.class, new PingSpoofI(playerData))
                 .put(PingSpoofJ.class, new PingSpoofJ(playerData))
                 .put(PingSpoofK.class, new PingSpoofK(playerData))
-                .put(PingSpoofL.class, new PingSpoofL(playerData))
                 .build();
     }
 

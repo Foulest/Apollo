@@ -13,6 +13,8 @@ import net.foulest.apollo.data.PlayerData;
 import net.foulest.apollo.packet.PacketHandler;
 import net.foulest.apollo.util.NmsUtil;
 
+import java.util.NoSuchElementException;
+
 public final class PlayerListener implements Listener {
 
     @EventHandler
@@ -53,8 +55,11 @@ public final class PlayerListener implements Listener {
          * by the channel. Some spigots who have messed with pipelines might have a bug where the
          * pipeline is never removed creating a memory leak. We're handling that here.
          */
-        if (channelPipeline.get("apollo_packet_handler") != null) {
-            Apollo.INSTANCE.getExecutorPacket().execute(() -> channelPipeline.remove("apollo_packet_handler"));
+        try {
+            if (channelPipeline.get("apollo_packet_handler") != null) {
+                Apollo.INSTANCE.getExecutorPacket().execute(() -> channelPipeline.remove("apollo_packet_handler"));
+            }
+        } catch (NoSuchElementException ignored) {
         }
 
         /*

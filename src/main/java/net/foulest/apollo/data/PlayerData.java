@@ -20,6 +20,7 @@ import net.foulest.apollo.Apollo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Getter
 @Setter
@@ -89,6 +90,31 @@ public final class PlayerData {
             Bukkit.getScheduler().runTask(Apollo.INSTANCE.getPlugin(), () -> {
                 // Kicks the player.
                 connection.disconnect("Disconnected");
+
+                // Sets up the alert message.
+                String alert = "&8[Apollo] &f" + bukkitPlayer.getName() + " &7was kicked for: &f" + reason
+                        + (Objects.equals(verbose, "") ? "" : " &7(" + verbose + ")");
+
+                // Sends an alert about the kick on a separate thread.
+                Apollo.INSTANCE.getExecutorAlert().execute(() -> Bukkit.getOnlinePlayers()
+                        .stream()
+                        .filter(send -> send.hasPermission("apollo.alerts"))
+                        .forEach(send -> MessageUtil.messagePlayer(send, alert)));
+
+                // Sends an alert about the kick to the console.
+                MessageUtil.log(alert);
+            });
+        }
+    }
+
+    public void kick(String reason, String verbose, String playerMessage) {
+        // Only kicks the player once.
+        if (!kicking.get()) {
+            kicking.set(true);
+
+            Bukkit.getScheduler().runTask(Apollo.INSTANCE.getPlugin(), () -> {
+                // Kicks the player.
+                connection.disconnect(playerMessage);
 
                 // Sets up the alert message.
                 String alert = "&8[Apollo] &f" + bukkitPlayer.getName() + " &7was kicked for: &f" + reason

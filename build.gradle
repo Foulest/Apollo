@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'net.foulest.apollo'
-version = '1.0-SNAPSHOT'
+version = '1.0.0'
 description = 'Apollo'
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 compileJava.options.encoding = 'UTF-8'

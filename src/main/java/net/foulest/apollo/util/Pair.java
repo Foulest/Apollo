@@ -2,10 +2,11 @@ package net.foulest.apollo.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.Objects;
 
-@Data
+@Getter
 @AllArgsConstructor
 public class Pair<A, B> {
 

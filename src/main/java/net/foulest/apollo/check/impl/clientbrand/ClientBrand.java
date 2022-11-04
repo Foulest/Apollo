@@ -33,6 +33,7 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("\u0005PLC18", "PvPLounge Client", DataType.BRAND, false),
 
             new PayloadType("\nLunar-Client", "Lunar Client Spoof", DataType.BRAND, true),
+            new PayloadType("\u000Blunarclient", "Lunar Client Spoof", DataType.BRAND, true),
             new PayloadType("Vanilla", "Vanilla Spoof", DataType.BRAND, true),
             new PayloadType("\u0007Vanilla", "Vanilla Spoof", DataType.BRAND, true),
             new PayloadType("Synergy", "Synergy Client", DataType.BRAND, true),
@@ -149,7 +150,6 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("HatStand", "HatStand", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("Hats", "Hats", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("InventoryTweaks", "InventoryTweaks", DataType.REGISTER_DATA_MOD, false),
-            new PayloadType("LogisticsPipes", "LogisticsPipes", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("MEK", "Mekanism", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("Morph", "Morph", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("Mystcraft", "Mystcraft", DataType.REGISTER_DATA_MOD, false),
@@ -210,7 +210,6 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("galacticraftcore", "GalactiCraft", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("gasconduits", "GasConduits", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("iChun_WorldPortals", "iChun", DataType.REGISTER_DATA_MOD, false),
-            new PayloadType("ic2", "IC2", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("icbmclassic", "ICBMClassic", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("industrialforegoing", "IndustrialForegoing", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("ironchest", "IronChest", DataType.REGISTER_DATA_MOD, false),
@@ -248,11 +247,223 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("world_id", "Unknown (world_id)", DataType.REGISTER_DATA_OTHER, false),
             new PayloadType("xreliquary", "Reliquary", DataType.REGISTER_DATA_MOD, false),
             new PayloadType("zettaindustries", "ZettaIndustries", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("rc&vswe.steves&10928", "RebornCore", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("rc&reborncore.&64769", "RebornCore", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("rc&reborncore.&39932", "RebornCore", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("rc&techreborn.&42258", "RebornCore", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("ic2", "IndustrialCraft 2", DataType.REGISTER_DATA_MOD, false),
+            new PayloadType("LogisticsPipes", "LogisticsPipes", DataType.REGISTER_DATA_MOD, false),
 
             new PayloadType("Lunar-Client", "Lunar Client Spoof", DataType.REGISTER_DATA_OTHER, true)
     );
 
     public static final List<PayloadType> PAYLOADS = Arrays.asList(
+            new PayloadType("sampler", "Sampler", DataType.CHANNEL, false),
+            new PayloadType("the5zigmod:5zig_set", "5zig Mod", DataType.CHANNEL, false),
+            new PayloadType("fabric:container/ope", "Fabric", DataType.CHANNEL, false),
+            new PayloadType("fabric:registry/sync", "Fabric", DataType.CHANNEL, false),
+            new PayloadType("feather:client", "Feather Client", DataType.CHANNEL, false),
+            new PayloadType("OCMC", "OpticCraft Client", DataType.CHANNEL, false),
+            new PayloadType("Schematica", "Schematica", DataType.CHANNEL, false),
+            new PayloadType("OpenComputers", "OpenComputers", DataType.CHANNEL, false),
+            new PayloadType("skinport", "SkinPort", DataType.CHANNEL, false),
+            new PayloadType("WDL|INIT", "WorldDownloader", DataType.CHANNEL, false),
+            new PayloadType("MorePlayerModels", "MorePlayerModels", DataType.CHANNEL, false),
+            new PayloadType("advancedcapes", "AdvancedCapes", DataType.CHANNEL, false),
+            new PayloadType("PERMISSIONSREPL", "WorldDownloader", DataType.CHANNEL, false),
+            new PayloadType("world_info", "Unknown (world_info)", DataType.CHANNEL, false),
+            new PayloadType("WECUI", "WorldEdit CUI", DataType.CHANNEL, false),
+            new PayloadType("BungeeCord", "BungeeCord", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("legacy:redisbungee", "BungeeCord", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("FML|HS", "Forge", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("FML", "Forge", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("FML|MP", "Forge", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("FORGE", "Forge", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("recipemod:key", "NoMoreRecipeConflict", DataType.CHANNEL, false),
+            new PayloadType("Animania", "Animania", DataType.CHANNEL, false),
+            new PayloadType("BiblioAStand", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioAtlas", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioAtlasSWP", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioAtlasTGUI", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioAtlasWPT", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioClipboard", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioClock", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioDeskOpenGUI", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioDrillText", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioMCBEdit", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioMCBPage", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioMapPin", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioMeasure", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioOpenBook", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioPaintPress", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioPainting", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioPaintingC", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioPaneler", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioRBook", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioRBookLoad", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioRecipeCraft", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioRecipeText", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioRenderUpdate", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioSign", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioStockCompass", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioStockLog", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioStockTitle", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioType", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioTypeDelete", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioTypeFlag", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioTypeUpdate", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("BiblioUpdateInv", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("OpenTerrainGenerator", "OpenTerrainGenerator", DataType.CHANNEL, false),
+            new PayloadType("appleskin", "AppleSkin", DataType.CHANNEL, false),
+            new PayloadType("autoreglib", "AutoRegLib", DataType.CHANNEL, false),
+            new PayloadType("backpack", "Backpacks", DataType.CHANNEL, false),
+            new PayloadType("betteranimalsplus", "BetterAnimalsPlus", DataType.CHANNEL, false),
+            new PayloadType("biomecolorizer:a", "BiomeColorizer", DataType.CHANNEL, false),
+            new PayloadType("cfm", "FurnitureMod", DataType.CHANNEL, false),
+            new PayloadType("chisel", "Chisel", DataType.CHANNEL, false),
+            new PayloadType("craftstudioapi", "CraftStudioAPI", DataType.CHANNEL, false),
+            new PayloadType("eplus", "EnchantingPlus", DataType.CHANNEL, false),
+            new PayloadType("fastbench", "FastWorkbench", DataType.CHANNEL, false),
+            new PayloadType("futuremc", "FutureMC", DataType.CHANNEL, false),
+            new PayloadType("harvestcraft", "Pam's HarvestCraft", DataType.CHANNEL, false),
+            new PayloadType("ichunutil", "iChunUtil", DataType.CHANNEL, false),
+            new PayloadType("jei", "JEI", DataType.CHANNEL, false),
+            new PayloadType("jeid", "JEI", DataType.CHANNEL, false),
+            new PayloadType("jm_dim_permission", "JourneyMap", DataType.CHANNEL, false),
+            new PayloadType("jm_init_login", "JourneyMap", DataType.CHANNEL, false),
+            new PayloadType("journeymap_channel", "JourneyMap", DataType.CHANNEL, false),
+            new PayloadType("openterraingenerator", "OpenTerrainGenerator", DataType.CHANNEL, false),
+            new PayloadType("patchouli", "Patchouli", DataType.CHANNEL, false),
+            new PayloadType("pixelmon", "Pixelmon", DataType.CHANNEL, false),
+            new PayloadType("storagedrawers", "StorageDrawers", DataType.CHANNEL, false),
+            new PayloadType("waila", "WAILA", DataType.CHANNEL, false),
+            new PayloadType("waystones", "Waystones", DataType.CHANNEL, false),
+            new PayloadType("world_info", "WorldInfo", DataType.CHANNEL, false),
+            new PayloadType("AE2", "AE2", DataType.CHANNEL, false),
+            new PayloadType("BIN", "BinnieMods", DataType.CHANNEL, false),
+            new PayloadType("BOT", "Botania", DataType.CHANNEL, false),
+            new PayloadType("CCL_INTERNAL", "CharsetCrafting", DataType.CHANNEL, false),
+            new PayloadType("ChickenChunks", "ChickenChunks", DataType.CHANNEL, false),
+            new PayloadType("ChiselsAndBits", "ChiselsAndBits", DataType.CHANNEL, false),
+            new PayloadType("CoFH", "CoFHCore", DataType.CHANNEL, false),
+            new PayloadType("EB", "Unknown (EB)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("ES", "Unknown (ES)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("ET", "Unknown (ET)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("EnderCore", "EnderCore", DataType.CHANNEL, false),
+            new PayloadType("FLoco", "FunkyLocomotion", DataType.CHANNEL, false),
+            new PayloadType("FOR", "Forge", DataType.CHANNEL, false),
+            new PayloadType("ForgeMicroblock", "Forge", DataType.CHANNEL, false),
+            new PayloadType("ForgeMultipart", "Forge", DataType.CHANNEL, false),
+            new PayloadType("GEN", "Unknown (GEN)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("GrCCellar", "GrowthCraft", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("GuideAPI", "GuideAPI", DataType.CHANNEL, false),
+            new PayloadType("HatStand", "HatStand", DataType.CHANNEL, false),
+            new PayloadType("Hats", "Hats", DataType.CHANNEL, false),
+            new PayloadType("InventoryTweaks", "InventoryTweaks", DataType.CHANNEL, false),
+            new PayloadType("MEK", "Mekanism", DataType.CHANNEL, false),
+            new PayloadType("Morph", "Morph", DataType.CHANNEL, false),
+            new PayloadType("Mystcraft", "Mystcraft", DataType.CHANNEL, false),
+            new PayloadType("OpenComputers", "OpenComputers", DataType.CHANNEL, false),
+            new PayloadType("OpenMods|E", "OpenMods", DataType.CHANNEL, false),
+            new PayloadType("OpenMods|M", "OpenMods", DataType.CHANNEL, false),
+            new PayloadType("OpenMods|RPC", "OpenMods", DataType.CHANNEL, false),
+            new PayloadType("PR|Integr", "ProjectRed", DataType.CHANNEL, false),
+            new PayloadType("PR|Reloc", "ProjectRed", DataType.CHANNEL, false),
+            new PayloadType("PR|Transp", "ProjectRed", DataType.CHANNEL, false),
+            new PayloadType("PneumaticCraft", "PneumaticCraft", DataType.CHANNEL, false),
+            new PayloadType("PortalGun", "PortalGun", DataType.CHANNEL, false),
+            new PayloadType("RC", "RebornCore", DataType.CHANNEL, false),
+            new PayloadType("TestDummy", "TestDummy", DataType.CHANNEL, false),
+            new PayloadType("WRCBE", "WRCBE", DataType.CHANNEL, false),
+            new PayloadType("WorldControl", "WorldControl", DataType.CHANNEL, false),
+            new PayloadType("XU2", "Unknown (XU2)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("aroma1997core", "Aroma1997", DataType.CHANNEL, false),
+            new PayloadType("aroma1997sdimension", "Aroma1997", DataType.CHANNEL, false),
+            new PayloadType("autoconfig", "Unknown (autoconfig)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("baubles", "Baubles", DataType.CHANNEL, false),
+            new PayloadType("bdew.ae2stuff", "Bdew", DataType.CHANNEL, false),
+            new PayloadType("bdew.compacter", "Bdew", DataType.CHANNEL, false),
+            new PayloadType("bdew.multiblock", "Bdew", DataType.CHANNEL, false),
+            new PayloadType("bibliocraft", "BiblioCraft", DataType.CHANNEL, false),
+            new PayloadType("bigreactors", "BigReactors", DataType.CHANNEL, false),
+            new PayloadType("biomesoplenty", "Biomes O' Plenty", DataType.CHANNEL, false),
+            new PayloadType("bloodmagic", "Blood Magic", DataType.CHANNEL, false),
+            new PayloadType("botania", "Botania", DataType.CHANNEL, false),
+            new PayloadType("buildcraftbuilders", "BuildCraft", DataType.CHANNEL, false),
+            new PayloadType("buildcraftcore", "BuildCraft", DataType.CHANNEL, false),
+            new PayloadType("buildcraftlib", "BuildCraft", DataType.CHANNEL, false),
+            new PayloadType("buildcraftrobotics", "BuildCraft", DataType.CHANNEL, false),
+            new PayloadType("buildcrafttransport", "BuildCraft", DataType.CHANNEL, false),
+            new PayloadType("chrs:lib", "Chrs", DataType.CHANNEL, false),
+            new PayloadType("chrs:pocket", "Chrs", DataType.CHANNEL, false),
+            new PayloadType("computercraft", "ComputerCraft", DataType.CHANNEL, false),
+            new PayloadType("computronics", "Computronics", DataType.CHANNEL, false),
+            new PayloadType("cookingforblockheads", "CookingForBlockheads", DataType.CHANNEL, false),
+            new PayloadType("crafttweaker", "CraftTweaker", DataType.CHANNEL, false),
+            new PayloadType("creativemd", "CreativeMD", DataType.CHANNEL, false),
+            new PayloadType("cucumber", "Cucumber", DataType.CHANNEL, false),
+            new PayloadType("culinaryconstruct", "CulinaryConstruct", DataType.CHANNEL, false),
+            new PayloadType("damagetilt", "DamageTilt", DataType.CHANNEL, false),
+            new PayloadType("eiococ", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("enderio", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("enderioconduits", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("enderioinvpanel", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("enderiomachines", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("enderiopowertools", "EnderIO", DataType.CHANNEL, false),
+            new PayloadType("exchangers", "Exchangers", DataType.CHANNEL, false),
+            new PayloadType("extracells", "ExtraCells", DataType.CHANNEL, false),
+            new PayloadType("extraplanets", "ExtraPlanets", DataType.CHANNEL, false),
+            new PayloadType("factorymanager", "FactoryManager", DataType.CHANNEL, false),
+            new PayloadType("fairylights", "FairyLights", DataType.CHANNEL, false),
+            new PayloadType("forgemultipartcbe", "Forge", DataType.CHANNEL, false),
+            new PayloadType("galacticraft", "GalactiCraft", DataType.CHANNEL, false),
+            new PayloadType("galacticraftcore", "GalactiCraft", DataType.CHANNEL, false),
+            new PayloadType("gasconduits", "GasConduits", DataType.CHANNEL, false),
+            new PayloadType("iChun_WorldPortals", "iChun", DataType.CHANNEL, false),
+            new PayloadType("icbmclassic", "ICBMClassic", DataType.CHANNEL, false),
+            new PayloadType("industrialforegoing", "IndustrialForegoing", DataType.CHANNEL, false),
+            new PayloadType("ironchest", "IronChest", DataType.CHANNEL, false),
+            new PayloadType("jee", "JustEnoughEnergistics", DataType.CHANNEL, false),
+            new PayloadType("mantle:books", "Mantle", DataType.CHANNEL, false),
+            new PayloadType("mcmultipart", "Forge", DataType.CHANNEL, false),
+            new PayloadType("mcmultipart_cbe", "Forge", DataType.CHANNEL, false),
+            new PayloadType("modularrouters", "ModularRouters", DataType.CHANNEL, false),
+            new PayloadType("mrtjpcore", "MrTJPCore", DataType.CHANNEL, false),
+            new PayloadType("mysticallib", "MysticalLib", DataType.CHANNEL, false),
+            new PayloadType("naturescompass", "NaturesCompass", DataType.CHANNEL, false),
+            new PayloadType("numina", "Numina", DataType.CHANNEL, false),
+            new PayloadType("planetprogression", "PlanetProgression", DataType.CHANNEL, false),
+            new PayloadType("plethora", "Plethora", DataType.CHANNEL, false),
+            new PayloadType("plustic", "Plustic", DataType.CHANNEL, false),
+            new PayloadType("projectred-core", "ProjectRed", DataType.CHANNEL, false),
+            new PayloadType("projectred-expansion", "ProjectRed", DataType.CHANNEL, false),
+            new PayloadType("reccomplex", "RecComplex", DataType.CHANNEL, false),
+            new PayloadType("schematica", "Schematica", DataType.CHANNEL, false),
+            new PayloadType("simplyjetpacks", "SimplyJetpacks", DataType.CHANNEL, false),
+            new PayloadType("statues", "Statues", DataType.CHANNEL, false),
+            new PayloadType("superfactorymanager", "SuperFactoryManager", DataType.CHANNEL, false),
+            new PayloadType("supersoundmuffler", "SuperSoundMuffler", DataType.CHANNEL, false),
+            new PayloadType("tconstruct", "TinkersConstruct", DataType.CHANNEL, false),
+            new PayloadType("teslacorelib", "TeslaCoreLib", DataType.CHANNEL, false),
+            new PayloadType("thaumcraft", "ThaumCraft", DataType.CHANNEL, false),
+            new PayloadType("thaumicaugmentation", "ThaumCraft", DataType.CHANNEL, false),
+            new PayloadType("thaumicenergistics", "ThaumCraft", DataType.CHANNEL, false),
+            new PayloadType("thaumictinkerer", "ThaumCraft", DataType.CHANNEL, false),
+            new PayloadType("torchmaster", "TorchMaster", DataType.CHANNEL, false),
+            new PayloadType("translocators", "Translocators", DataType.CHANNEL, false),
+            new PayloadType("treechop-channel", "TreeChop", DataType.CHANNEL, false),
+            new PayloadType("twilightforest", "TwilightForest", DataType.CHANNEL, false),
+            new PayloadType("wanionlib", "WanionLib", DataType.CHANNEL, false),
+            new PayloadType("world_id", "Unknown (world_id)", DataType.REGISTER_DATA_OTHER, false),
+            new PayloadType("xreliquary", "Reliquary", DataType.CHANNEL, false),
+            new PayloadType("zettaindustries", "ZettaIndustries", DataType.CHANNEL, false),
+            new PayloadType("rc&vswe.steves&10928", "RebornCore", DataType.CHANNEL, false),
+            new PayloadType("rc&reborncore.&64769", "RebornCore", DataType.CHANNEL, false),
+            new PayloadType("rc&reborncore.&39932", "RebornCore", DataType.CHANNEL, false),
+            new PayloadType("rc&techreborn.&42258", "RebornCore", DataType.CHANNEL, false),
+            new PayloadType("ic2", "IndustrialCraft 2", DataType.CHANNEL, false),
+            new PayloadType("LogisticsPipes", "LogisticsPipes", DataType.CHANNEL, false),
+
             new PayloadType("LOLIMAHCKER", "Cracked Vape", DataType.CHANNEL, true),
             new PayloadType("CPS_BAN_THIS_NIGGER", "Cracked Vape", DataType.CHANNEL, true),
             new PayloadType("#unbanearwax", "Cracked Vape", DataType.CHANNEL, true),
@@ -271,6 +482,7 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("mincraftpvphcker", "BspkrsCore Client", DataType.CHANNEL, true),
             new PayloadType("MCnetHandler", "TimeChanger Misplace", DataType.CHANNEL, true),
 
+            new PayloadType("Lunar-Client", "Lunar Client Spoof", DataType.CHANNEL, true),
             new PayloadType("n", "Unknown Cheat (n)", DataType.CHANNEL, true),
             new PayloadType("BLC|M", "Unknown Cheat (BLC|M)", DataType.CHANNEL, true),
             new PayloadType("XDSMKDKFDKSDAKDFkEJF", "Unknown Cheat (XDSMKDKFDKSDAKDFkEJF)", DataType.CHANNEL, true),
@@ -319,6 +531,17 @@ public class ClientBrand extends PacketCheck {
                 // Player sends an unknown channel, check it.
                 checkPayload(packet.getPayload());
             }
+
+            // Kicks players with the GalactiCraft mod.
+            // Players with this mod can press 'B', which freezes them in the air,
+            // effectively flying, which promptly gets them banned for flying.
+            for (PayloadType payloadType : playerData.getPayloads()){
+                if (payloadType.name.equals("GalactiCraft")) {
+                    playerData.kick("Blacklisted Mod", "GalactiCraft",
+                            "The GalactiCraft mod is not allowed.");
+                    return;
+                }
+            }
         }
     }
 
@@ -345,8 +568,8 @@ public class ClientBrand extends PacketCheck {
                     playerData.kick("Blacklisted Brand", payloadType.name + " (" + payloadType.data + ")");
                 } else {
                     playerData.getPayloads().add(payloadType);
-                    return;
                 }
+                return;
             }
         }
 
@@ -372,8 +595,8 @@ public class ClientBrand extends PacketCheck {
                     playerData.kick("Blacklisted Data", payloadType.name + " (" + payloadType.data + ")");
                 } else {
                     playerData.getPayloads().add(payloadType);
-                    return;
                 }
+                return;
             }
         }
 
@@ -405,9 +628,22 @@ public class ClientBrand extends PacketCheck {
                     playerData.kick("Blacklisted Payload", payloadType.name + " (" + payloadType.data + ")");
                 } else {
                     playerData.getPayloads().add(payloadType);
-                    return;
                 }
+                return;
             }
+        }
+
+        // Prints warnings for players with unknown payloads.
+        AlertManager.sendAlert("&8[Apollo] &f" + playerData.getBukkitPlayer().getName()
+                + " &7sent an unknown payload: &f" + channelName);
+
+        // Prints unknown data to a text file.
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("unknown-payload.txt"));
+            writer.write(channelName);
+            writer.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }

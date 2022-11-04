@@ -1,0 +1,5 @@
+name: Apollo
+authors: [Foulest]
+description: Apollo Anticheat
+version: 1.0.0
+main: net.foulest.apollo.ApolloPlugin

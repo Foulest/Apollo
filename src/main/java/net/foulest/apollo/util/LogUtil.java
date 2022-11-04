@@ -6,6 +6,6 @@ import lombok.experimental.UtilityClass;
 public class LogUtil {
 
     public void log(String log) {
-        System.out.println("[Soteria]: " + log);
+        System.out.println("[Apollo]: " + log);
     }
 }
