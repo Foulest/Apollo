@@ -26,7 +26,7 @@ public class BadPacketsF extends PacketCheck {
             String payload = packet.getPayload();
 
             // Detects sending packets with invalid sizes.
-            if (packet.getData().length() > 15000 || packet.getData().length() <= 0) {
+            if (packet.getData().length() > 15000 || packet.getData().length() == 0) {
                 playerData.kick(getCheckName(), "SIZE=" + packet.getData().length());
                 return;
             }

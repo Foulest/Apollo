@@ -21,10 +21,14 @@ public final class AlertManager {
     private final String broadcast = ColorUtil.format("&c%s has been banned for cheating.");
     private final List<Long> alerts = Lists.newArrayList();
 
-    public void fail(String verbose) {
+    public void fail(String verbose, boolean ban) {
         long now = System.currentTimeMillis();
         PlayerData playerData = check.getPlayerData();
         Player player = playerData.getBukkitPlayer();
+
+        if (playerData.getKicking().get()) {
+            return;
+        }
 
         if (alerts.contains(now)) {
             return;
@@ -40,8 +44,13 @@ public final class AlertManager {
         String message = String.format(broadcast, player.getName());
 
         if (violations > threshold) {
-            // TODO: Configurable punishment command
-            Bukkit.broadcastMessage(message);
+            if (ban) {
+                playerData.ban(check.getCheckName(), verbose, "Unfair Advantage", true);
+                Bukkit.broadcastMessage(message);
+            } else {
+                playerData.kick(check.getCheckName(), verbose, "Disconnected");
+            }
+
             alerts.clear();
         }
 

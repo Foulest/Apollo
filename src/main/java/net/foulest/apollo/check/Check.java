@@ -31,12 +31,12 @@ public abstract class Check<T> {
         }
     }
 
-    protected void fail() {
-        alertManager.fail("");
+    protected void fail(boolean ban) {
+        alertManager.fail("", ban);
     }
 
-    protected void fail(String verbose) {
-        alertManager.fail(verbose);
+    protected void fail(String verbose, boolean ban) {
+        alertManager.fail(verbose, ban);
     }
 
     protected boolean isExempt(ExemptType exemptType) {

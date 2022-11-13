@@ -464,6 +464,8 @@ public class ClientBrand extends PacketCheck {
             new PayloadType("ic2", "IndustrialCraft 2", DataType.CHANNEL, false),
             new PayloadType("LogisticsPipes", "LogisticsPipes", DataType.CHANNEL, false),
 
+            new PayloadType("MC|ItemName", "Minecraft", DataType.CHANNEL, false),
+
             new PayloadType("LOLIMAHCKER", "Cracked Vape", DataType.CHANNEL, true),
             new PayloadType("CPS_BAN_THIS_NIGGER", "Cracked Vape", DataType.CHANNEL, true),
             new PayloadType("#unbanearwax", "Cracked Vape", DataType.CHANNEL, true),

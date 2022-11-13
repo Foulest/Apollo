@@ -40,26 +40,30 @@ public class InventoryF extends PacketCheck {
                     return;
 
                 case 1:
-                    if (packet.getButton() != 0 && packet.getButton() != 1) {
+                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2
+                            && packet.getButton() != 5) {
                         playerData.kick(getCheckName(), "Quick Move (" + packet.getButton() + ")");
                     }
                     return;
 
                 case 2:
                     if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2
-                            && packet.getButton() != 8 && packet.getButton() != 40) {
+                            && packet.getButton() != 3 && packet.getButton() != 4 && packet.getButton() != 8
+                            && packet.getButton() != 40) {
                         playerData.kick(getCheckName(), "Swap (" + packet.getButton() + ")");
                     }
                     return;
 
                 case 3:
-                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2) {
+                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2
+                            && packet.getButton() != 4 && packet.getButton() != 5) {
                         playerData.kick(getCheckName(), "Clone (" + packet.getButton() + ")");
                     }
                     return;
 
                 case 4:
-                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2) {
+                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2
+                            && packet.getButton() != 4 && packet.getButton() != 5 && packet.getButton() != 6) {
                         playerData.kick(getCheckName(), "Throw (" + packet.getButton() + ")");
                     }
                     return;
@@ -73,7 +77,9 @@ public class InventoryF extends PacketCheck {
                     return;
 
                 case 6:
-                    if (packet.getButton() != 0 && packet.getButton() != 1) {
+                    if (packet.getButton() != 0 && packet.getButton() != 1 && packet.getButton() != 2
+                            && packet.getButton() != 3 && packet.getButton() != 4 && packet.getButton() != 5
+                            && packet.getButton() != 6) {
                         playerData.kick(getCheckName(), "Pickup All (" + packet.getButton() + ")");
                     }
             }

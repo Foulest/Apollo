@@ -29,6 +29,7 @@ public final class BadPacketsH extends PacketCheck {
 
             if (!wrapper.hasPos() && playerData.getBukkitPlayer().getVehicle() == null) {
                 if (++streak > 20) {
+                    fail("", true);
                     playerData.kick(getCheckName(), "Idle Packet");
                 }
             } else {

@@ -29,12 +29,7 @@ public class BadPacketsI extends PacketCheck {
         if (object instanceof WrappedPlayInBlockDig) {
             WrappedPlayInBlockDig packet = (WrappedPlayInBlockDig) object;
 
-            // Detects sending two START_DIGGING packets in a row.
             if (packet.getDigType() == PacketPlayInBlockDig.EnumPlayerDigType.START_DESTROY_BLOCK) {
-                if (sentStart) {
-                    playerData.kick(getCheckName(), "Sent Start");
-                }
-
                 sentStart = true;
                 sentAbort = false;
                 sentStop = false;

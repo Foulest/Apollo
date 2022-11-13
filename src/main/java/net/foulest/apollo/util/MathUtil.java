@@ -63,8 +63,8 @@ public class MathUtil {
      * @See - <a href="https://en.wikipedia.org/wiki/Skewness">...</a>
      */
     public double getSkewness(Collection<? extends Number> data) {
-        double sum = 0;
         int count = 0;
+        double sum = 0;
         List<Double> numbers = Lists.newArrayList();
 
         // Get the sum of all the data and the amount via looping

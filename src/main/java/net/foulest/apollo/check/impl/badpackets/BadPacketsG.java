@@ -25,9 +25,9 @@ public final class BadPacketsG extends PacketCheck {
             float forward = Math.abs(wrapper.getForward());
             float side = Math.abs(wrapper.getSide());
 
-            if (isExempt(ExemptType.VEHICLE)) {
-                playerData.kick(getCheckName(), "Not in Vehicle");
-            }
+//            if (isExempt(ExemptType.VEHICLE)) {
+//                playerData.kick(getCheckName(), "Not in Vehicle");
+//            }
 
             if (side > 0.9800000190734863F || forward > 0.9800000190734863F) {
                 playerData.kick(getCheckName(), "Invalid Steer");

@@ -24,6 +24,10 @@ public final class PingSpoofC extends PacketCheck {
 
         } else if (object instanceof WrappedPlayInKeepAlive) {
             if (++packetsReceived > packetsSent) {
+                if (packetsSent == 0 && packetsReceived == 1) {
+                    return;
+                }
+
                 playerData.kick(getCheckName(), "SENT=" + packetsSent + " RECEIVED=" + packetsReceived);
             }
         }

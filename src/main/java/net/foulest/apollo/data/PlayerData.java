@@ -131,4 +131,31 @@ public final class PlayerData {
             });
         }
     }
+
+    public void ban(String reason, String verbose, String banMessage, boolean silent) {
+        // Only bans the player once.
+        if (!kicking.get()) {
+            kicking.set(true);
+
+            Bukkit.getScheduler().runTask(Apollo.INSTANCE.getPlugin(), () -> {
+                // Kicks the player.
+                connection.disconnect("Disconnected");
+                Bukkit.getConsoleSender().sendMessage("ban " + (silent ? "-s" : "")
+                        + " " + bukkitPlayer.getName() + " " + banMessage);
+
+                // Sets up the alert message.
+                String alert = "&8[Apollo] &f" + bukkitPlayer.getName() + " &7was banned for: &f" + reason
+                        + (Objects.equals(verbose, "") ? "" : " &7(" + verbose + ")");
+
+                // Sends an alert about the kick on a separate thread.
+                Apollo.INSTANCE.getExecutorAlert().execute(() -> Bukkit.getOnlinePlayers()
+                        .stream()
+                        .filter(send -> send.hasPermission("apollo.alerts"))
+                        .forEach(send -> MessageUtil.messagePlayer(send, alert)));
+
+                // Sends an alert about the kick to the console.
+                MessageUtil.log(alert);
+            });
+        }
+    }
 }

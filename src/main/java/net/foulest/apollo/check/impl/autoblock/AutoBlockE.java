@@ -56,12 +56,8 @@ public class AutoBlockE extends PacketCheck {
         }
     }
 
-    // Detects sending multiple PLACE or RELEASE packets in a row.
+    // Detects sending multiple RELEASE packets in a row.
     public void check() {
-        if (placeCount > 3) {
-            playerData.kick(getCheckName(), "PLACE=" + placeCount);
-        }
-
         if (releaseCount > 1) {
             playerData.kick(getCheckName(), "RELEASE=" + releaseCount);
         }

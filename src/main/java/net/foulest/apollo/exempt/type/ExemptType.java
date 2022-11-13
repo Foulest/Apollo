@@ -50,7 +50,7 @@ public enum ExemptType {
      * Returns true if the player was in/near/on a vehicle.
      * Not as prone to spoofing as they actually have to be near a vehicle.
      */
-    VEHICLE(playerData -> (playerData.getBukkitPlayer().isInsideVehicle())
+    VEHICLE(playerData -> playerData.getBukkitPlayer().isInsideVehicle()
             || playerData.getPositionManager().getNearbyEntities().get() != null
             && Arrays.stream(playerData.getPositionManager().getNearbyEntities().get())
             .anyMatch(entity -> entity instanceof Boat || entity instanceof Minecart || entity instanceof Horse));

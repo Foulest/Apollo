@@ -49,7 +49,6 @@ public final class CheckManager {
                 .put(Cinematic.class, new Cinematic(playerData))
                 .put(AimAssistA.class, new AimAssistA(playerData))
                 .put(AimAssistB.class, new AimAssistB(playerData))
-                .put(AimAssistC.class, new AimAssistC(playerData))
                 .put(AimAssistD.class, new AimAssistD(playerData))
                 .put(AimAssistE.class, new AimAssistE(playerData))
 
@@ -82,11 +81,9 @@ public final class CheckManager {
 
                 .put(AutoClickerC.class, new AutoClickerC(playerData))
                 .put(AutoClickerD.class, new AutoClickerD(playerData))
-                .put(AutoClickerF.class, new AutoClickerF(playerData))
                 .put(AutoClickerG.class, new AutoClickerG(playerData))
 
                 .put(InventoryB.class, new InventoryB(playerData))
-                .put(InventoryC.class, new InventoryC(playerData))
                 .put(InventoryD.class, new InventoryD(playerData))
                 .put(InventoryE.class, new InventoryE(playerData))
                 .put(InventoryF.class, new InventoryF(playerData))
@@ -103,7 +100,6 @@ public final class CheckManager {
                 .put(PingSpoofB.class, new PingSpoofB(playerData))
                 .put(PingSpoofC.class, new PingSpoofC(playerData))
                 .put(PingSpoofD.class, new PingSpoofD(playerData))
-                .put(PingSpoofE.class, new PingSpoofE(playerData))
                 .put(PingSpoofF.class, new PingSpoofF(playerData))
                 .put(PingSpoofG.class, new PingSpoofG(playerData))
                 .put(PingSpoofH.class, new PingSpoofH(playerData))

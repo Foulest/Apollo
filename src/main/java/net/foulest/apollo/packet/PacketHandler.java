@@ -24,8 +24,8 @@ public final class PacketHandler extends ChannelDuplexHandler {
             Apollo.INSTANCE.getProcessorManager()
                     .getProcessor(OutgoingPacketProcessor.class)
                     .process(playerData, packet);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 
@@ -39,8 +39,8 @@ public final class PacketHandler extends ChannelDuplexHandler {
             Apollo.INSTANCE.getProcessorManager()
                     .getProcessor(IncomingPacketProcessor.class)
                     .process(playerData, packet);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 }

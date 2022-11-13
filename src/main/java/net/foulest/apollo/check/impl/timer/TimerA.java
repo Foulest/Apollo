@@ -62,7 +62,7 @@ public final class TimerA extends PacketCheck {
                  * the expected tick should always be 50ms. To check how much the player has deviated from that
                  * single point, we're using it as a threshold value in the deviation check below.
                  */
-                final double threshold = 7.07;
+                double threshold = 7.07;
                 double deviation = movingStats.getStdDev(threshold);
 
                 // We're making sure the deviation check processed and the deviation is smaller than the threshold.
@@ -77,7 +77,7 @@ public final class TimerA extends PacketCheck {
 
                     // Our previous threshold can act as one here too.
                     if (allowance > Math.floor(threshold)) {
-                        playerData.kick(getCheckName(), "");
+                        fail("A=" + allowance + " T=" + Math.floor(threshold), false);
                     }
                 } else {
                     allowance = 0;

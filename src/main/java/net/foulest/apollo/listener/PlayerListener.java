@@ -1,6 +1,10 @@
 package net.foulest.apollo.listener;
 
 import io.netty.channel.ChannelPipeline;
+import net.foulest.apollo.Apollo;
+import net.foulest.apollo.data.PlayerData;
+import net.foulest.apollo.packet.PacketHandler;
+import net.foulest.apollo.util.NmsUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -8,12 +12,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import net.foulest.apollo.Apollo;
-import net.foulest.apollo.data.PlayerData;
-import net.foulest.apollo.packet.PacketHandler;
-import net.foulest.apollo.util.NmsUtil;
-
-import java.util.NoSuchElementException;
 
 public final class PlayerListener implements Listener {
 
@@ -40,7 +38,12 @@ public final class PlayerListener implements Listener {
          * for us to know if the player is digging a block or not. Thankfully, the spigot itself does the raytrace
          * for us meaning we don't have to waste any performance by doing it ourselves.
          */
-        if (event.getAction() == Action.LEFT_CLICK_BLOCK) {
+        block:
+        {
+            if (event.getAction() != Action.LEFT_CLICK_BLOCK) {
+                break block;
+            }
+
             playerData.getActionManager().onBukkitDig();
         }
     }
@@ -55,11 +58,13 @@ public final class PlayerListener implements Listener {
          * by the channel. Some spigots who have messed with pipelines might have a bug where the
          * pipeline is never removed creating a memory leak. We're handling that here.
          */
-        try {
-            if (channelPipeline.get("apollo_packet_handler") != null) {
-                Apollo.INSTANCE.getExecutorPacket().execute(() -> channelPipeline.remove("apollo_packet_handler"));
+        removal:
+        {
+            if (channelPipeline.get("apollo_packet_handler") == null) {
+                break removal;
             }
-        } catch (NoSuchElementException ignored) {
+
+            Apollo.INSTANCE.getExecutorPacket().execute(() -> channelPipeline.remove("apollo_packet_handler"));
         }
 
         /*

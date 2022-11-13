@@ -28,11 +28,21 @@ public final class WrappedPlayInUseEntity extends PacketWrapper {
 
     public Entity getTarget(World world) {
         int entityId = get("a");
+
+        if (world.a(entityId) == null) {
+            return null;
+        }
+
         return world.a(entityId).getBukkitEntity();
     }
 
     public Vector getVector() {
         Vec3D vec3D = get("c");
+
+        if (vec3D == null) {
+            return new Vector(0.0, 0.0, 0.0);
+        }
+
         return new Vector(vec3D.a, vec3D.b, vec3D.c);
     }
 }
