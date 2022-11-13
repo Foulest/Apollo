@@ -28,10 +28,6 @@ public class BadPacketsN extends PacketCheck {
             WrappedPlayInClientCommand packet = (WrappedPlayInClientCommand) object;
 
             if (packet.getCommand() == PacketPlayInClientCommand.EnumClientCommand.PERFORM_RESPAWN) {
-                if (!playerData.getBukkitPlayer().isDead()) {
-                    playerData.kick(getCheckName(), "Respawn (Impossible)");
-                }
-
                 if (sentRespawn) {
                     playerData.kick(getCheckName(), "Respawn (Sent)");
                 }
